@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: url("assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+        format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: "Inconsolata";
+}
+
+input[type="file"] {
+    background-color: #222;
+    border: 1px dashed #666;
+    border-radius: 1000px;
+    padding: 0.5rem 2rem;
+    height: 4rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input[type="text"],
+input[type="email"] {
+    background-color: #222;
+    border: 1px solid #666;
+    border-radius: 1000px;
+    padding: 0.5rem 1rem;
+    color: white;
+    transition: background-color ease 0.1s;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    background-color: #282828;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.generator {
+    display: flex;
+    justify-content: center;
+}
+.generator form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #333;
+    border-radius: 10px;
+}
+.generator form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.generator form .field-name {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+.generator form button[type="submit"] {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border: 1px solid #666;
+    color: white;
+    border-radius: 1000px;
+    transition: background-color ease 0.1s;
+}
+.generator form button[type="submit"]:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+#result > .title {
+    text-align: center;
+}
+.highlight {
+    color: rgb(238, 133, 29);
+}
+#result > .info {
+    text-align: center;
+}
+
+#ticket-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+#ticket {
+    padding: 2rem;
+    /* border-radius: 10px; */
+    /* background-color: #333; */
+    background: url(assets/images/pattern-ticket.svg);
+    background-size: cover;
+    /* border: 1px solid #888; */
+    height: 280px;
+    width: 600px;
+}
+@media only screen and (max-width: 700px) {
+    #ticket {
+        flex-shrink: 0;
+        padding: 1rem;
+        height: calc(280px / 1.25);
+        width: calc(600px / 1.25);
+    }
+}
+@media only screen and (max-width: 480px) {
+    #ticket-wrapper {
+        justify-content: initial;
+        overflow-x: auto;
+    }
+}
+
+#ticket {
+    --logo-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#ticket .header {
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr;
+    grid-template-rows: var(--logo-size) 1fr;
+    gap: 1rem;
+    grid-column: 2;
+}
+#ticket .header img {
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+#ticket .header .title {
+    font-size: var(--logo-size);
+    line-height: var(--logo-size);
+    font-weight: bold;
+}
+#ticket .header .sub {
+    grid-column: 2;
+    color: #bbb;
+}
+#ticket .content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#ticket .content .avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: #888;
+    border-radius: 1000px;
+    object-fit: cover;
+}
+#ticket .content .name {
+    font-size: 1.5rem;
+}
+#ticket .content .github {
+    line-height: 2rem;
+    display: flex;
+    gap: 0.25rem;
+    color: #ddd;
+}
+#ticket .content .github img {
+    width: 2rem;
+}
