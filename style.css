@@ -8,20 +8,25 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: #222;
-	background-image: url(assets/images/background-desktop.png);
-	background-size: cover;
+	--main-bg: url(assets/images/background-desktop.png);
+	background-color: #040129;
+	background: repeat url(assets/images/pattern-lines.svg),
+		no-repeat bottom left / 60%
+			url(assets/images/pattern-squiggly-line-bottom-desktop.svg),
+		no-repeat top right / 40%
+			url(assets/images/pattern-squiggly-line-top.svg),
+		no-repeat center / cover var(--main-bg), #040129;
 	color: #eee;
 	font-family: "Inconsolata";
 }
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
 	body {
-		background-image: url(assets/images/background-tablet.png);
+		--main-bg: url(assets/images/background-tablet.png);
 	}
 }
 @media only screen and (max-width: 700px) {
 	body {
-		background-image: url(assets/images/background-mobile.png);
+		--main-bg: url(assets/images/background-mobile.png);
 	}
 }
 
@@ -33,7 +38,7 @@ body {
 
 input[type="file"] {
 	background-color: #22222280;
-	border: 1px dashed #6665;
+	border: 1px dashed #666a;
 	border-radius: 1000px;
 	padding: 0.5rem 2rem;
 	height: 4rem;
@@ -44,19 +49,16 @@ input[type="file"] {
 	transition: background-color ease 0.1s, border-color ease 0.1s;
 	cursor: pointer;
 }
-input[type="file"]:valid {
-	border-color: #666b;
-}
 input[type="file"]:hover {
 	background-color: #28282880;
-	border-color: #666a;
+	border-color: #666f;
 }
 input[type="text"],
 input[type="email"] {
 	background-color: #22222280;
-	border: 1px solid #6665;
+	border: 1px solid #666a;
 	border-radius: 1000px;
-	padding: 0.5rem 1rem;
+	padding: 0.75rem 1rem;
 	color: white;
 	transition: background-color ease 0.1s;
 }
@@ -86,8 +88,8 @@ input[type="email"]:focus {
 	flex-direction: column;
 	gap: 1rem;
 	padding: 2rem;
-	background-color: #0007;
-	backdrop-filter: blur(10px);
+	/* background-color: #0007; */
+	/* backdrop-filter: blur(10px); */
 	border-radius: 10px;
 }
 #generator form .field {
@@ -112,7 +114,7 @@ input[type="email"]:focus {
 	opacity: 0.5;
 	cursor: not-allowed !important;
 	background-color: #333;
-	border: 1px solid #666;
+	border: 1px solid #555;
 }
 #generator form:valid button[type="submit"]:hover {
 	background-color: rgb(238, 133, 29, 0.2);
