@@ -1,135 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/images/favicon-32x32.png"
-        />
-        <link rel="stylesheet" href="style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
 
-        <title>Frontend Mentor | Conference ticket generator</title>
+		<title>Frontend Mentor | Conference ticket generator</title>
 
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
 
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
-    </head>
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
 
-    <body>
-        <button id="devfill">TEST FILL</button>
+	<body>
+		<button id="devfill">Preencher Teste</button>
 
-        <!-- Form starts -->
-        <div class="generator">
-            <form action="">
-                <h2 class="text-center" style="margin: 0">
-                    Your Journey to Coding Conf 2025 Starts Here!
-                </h2>
-                <div class="text-center" style="margin-bottom: 2rem">
-                    Secure your spot at next year's biggest coding conference.
-                </div>
+		<div id="header">
+			<img src="assets/images/logo-full.svg" alt="" />
+		</div>
 
-                <div class="field">
-                    <div class="field-name">Upload Avatar</div>
-                    <div>Drag and drop or click to upload</div>
-                    <input required type="file" name="avatar" id="avatar" />
-                    <div>Upload your photo (JPG or PNG, max size: 500KB).</div>
-                </div>
+		<!-- Form starts -->
+		<div id="generator">
+			<form action="">
+				<h2 class="text-center" style="margin: 0">
+					Your Journey to Coding Conf 2025 Starts Here!
+				</h2>
+				<div class="text-center" style="margin-bottom: 2rem">
+					Secure your spot at next year's biggest coding conference.
+				</div>
 
-                <div class="field">
-                    <div class="field-name">Full Name</div>
-                    <input required type="text" name="fullname" id="fullname" />
-                </div>
+				<div class="field">
+					<div class="field-name">Upload Avatar</div>
+					<div>Drag and drop or click to upload</div>
+					<input required type="file" name="avatar" id="avatar" />
+					<div><img src="assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</div>
+				</div>
 
-                <div class="field">
-                    <div class="field-name">Email Address</div>
-                    <input
-                        required
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="example@email.com"
-                    />
-                </div>
+				<div class="field">
+					<div class="field-name">Full Name</div>
+					<input required type="text" name="fullname" id="fullname" />
+				</div>
 
-                <div class="field">
-                    <div class="field-name">GitHub Username</div>
-                    <input
-                        required
-                        type="text"
-                        name="username"
-                        id="username"
-                        placeholder="@yourusername"
-                    />
-                </div>
+				<div class="field">
+					<div class="field-name">Email Address</div>
+					<input
+						required
+						type="email"
+						name="email"
+						id="email"
+						placeholder="example@email.com"
+					/>
+				</div>
 
-                <button type="submit">Generate My Ticket</button>
-            </form>
-        </div>
-        <!-- Form ends -->
+				<div class="field">
+					<div class="field-name">GitHub Username</div>
+					<input
+						required
+						type="text"
+						name="username"
+						id="username"
+						placeholder="@yourusername"
+					/>
+				</div>
 
-        <!-- Generated tickets starts -->
-        <div id="result" style="display: none">
-            <h1 class="title">
-                Congrats, <span class="highlight data-name">Foo Bar</span>!
-                <br />
-                Your ticket is ready.
-            </h1>
-            <div class="info">
-                We've emailed your ticket to
-                <br />
-                <span class="highlight data-email">foobar@example.com</span> and
-                will send updates in
-                <br />
-                the run up to the event.
-            </div>
+				<button type="submit">Generate My Ticket</button>
+			</form>
+		</div>
+		<!-- Form ends -->
 
-            <div id="ticket-wrapper">
-                <div id="ticket">
-                    <div class="header">
-                        <img src="assets/images/logo-mark.svg" alt="" />
-                        <div class="title">Coding Conf</div>
-                        <div class="sub">Jan 31, 2025 / Austin, TX</div>
-                    </div>
-                    <div class="content">
-                        <img src="" alt="" class="avatar data-avatar" />
-                        <div class="info">
-                            <div class="name data-name">Foo Bar</div>
-                            <div class="github">
-                                <img
-                                    src="assets/images/icon-github.svg"
-                                    alt="GH"
-                                />
-                                <div class="username data-username">
-                                    @foobar
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Generated tickets ends -->
+		<!-- Generated tickets starts -->
+		<div id="result" style="display: none">
+			<h1 class="title">
+				Congrats, <span class="highlight data-name">Foo Bar</span>!
+				<br />
+				Your ticket is ready.
+			</h1>
+			<div class="info">
+				We've emailed your ticket to
+				<br />
+				<span class="highlight data-email">foobar@example.com</span> and
+				will send updates in
+				<br />
+				the run up to the event.
+			</div>
 
-        <div class="attribution">
-            Challenge by
-            <a href="https://www.frontendmentor.io?ref=challenge"
-                >Frontend Mentor</a
-            >. Coded by <a href="#">Tiago Vianna</a>.
-        </div>
+			<div id="ticket-wrapper">
+				<div id="ticket">
+					<div class="header">
+						<img src="assets/images/logo-mark.svg" alt="" />
+						<div class="title">Coding Conf</div>
+						<div class="sub">
+							<span class="data-date">Jan 31, 2025</span> /
+							Austin, TX
+						</div>
+					</div>
+					<div class="content">
+						<img src="" alt="" class="avatar data-avatar" />
+						<div class="info">
+							<div class="name data-name">Foo Bar</div>
+							<div class="github">
+								<img
+									src="assets/images/icon-github.svg"
+									alt="GH"
+								/>
+								<div class="username data-username">
+									@foobar
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="code">
+						#<span class="data-ticketcode">01234</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Generated tickets ends -->
 
-        <script src="main.js"></script>
-    </body>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Tiago Vianna</a>.
+		</div>
+
+		<script src="main.js"></script>
+	</body>
 </html>
