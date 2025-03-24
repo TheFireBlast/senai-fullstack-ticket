@@ -37,19 +37,6 @@ body {
 	left: 0;
 }
 
-input[type="file"] {
-	background-color: #22222280;
-	border: 1px dashed #666a;
-	border-radius: 1000px;
-	padding: 0.5rem 2rem;
-	height: 4rem;
-	line-height: 3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	transition: background-color ease 0.1s, border-color ease 0.1s;
-	cursor: pointer;
-}
 input[type="file"]:hover {
 	background-color: #28282880;
 	border-color: #666f;
@@ -101,6 +88,46 @@ input[type="email"]:focus {
 #generator form .field-name {
 	font-size: 1.25rem;
 	margin-top: 0.5rem;
+}
+#generator #avatar-wrapper {
+	background-color: #22222280;
+	border: 1px dashed #666a;
+	border-radius: 1000px;
+	padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: background-color ease 0.1s, border-color ease 0.1s;
+	cursor: pointer;
+	gap: 0.5rem;
+}
+#generator #avatar-wrapper .icon {
+	background-color: #27245880;
+	padding: 0.25rem;
+	border-radius: 10px;
+	border: 1px solid #504b8b;
+}
+#generator #avatar-wrapper .filled img {
+	border-radius: 10px;
+	border: 1px solid #504b8b;
+}
+#generator #avatar-wrapper .filled .buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+#generator #avatar-wrapper .filled .buttons button {
+	background-color: #4c426e80;
+	border-radius: 5px;
+	transition: all ease 0.1s;
+	border: none;
+	color: white;
+	padding: 0.25rem 0.5rem;
+}
+#generator #avatar-wrapper .filled .buttons button:hover {
+	background-color: #44444480;
+}
+#generator #avatar-wrapper input {
+	display: none;
 }
 #generator form button[type="submit"] {
 	align-self: center;

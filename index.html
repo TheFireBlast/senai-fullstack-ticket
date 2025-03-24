@@ -47,9 +47,38 @@
 
 				<div class="field">
 					<div class="field-name">Upload Avatar</div>
-					<div>Drag and drop or click to upload</div>
-					<input required type="file" name="avatar" id="avatar" />
-					<div><img src="assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</div>
+					<label id="avatar-wrapper">
+						<input required type="file" name="avatar" id="avatar" />
+						<div class="empty" style="display: contents">
+							<div class="icon">
+								<img
+									src="assets/images/icon-upload.svg"
+									alt=""
+									width="32"
+									height="32"
+								/>
+							</div>
+							<div>Drag and drop or click to upload</div>
+						</div>
+						<div class="filled" style="display: none">
+							<img src="" alt="" width="64" height="64" />
+							<div class="buttons">
+								<button type="button" onclick="removeAvatar()">
+									Remove image
+								</button>
+								<button
+									type="button"
+									onclick="avatarInput.click()"
+								>
+									Change image
+								</button>
+							</div>
+						</div>
+					</label>
+					<div>
+						<img src="assets/images/icon-info.svg" alt="" /> Upload
+						your photo (JPG or PNG, max size: 500KB).
+					</div>
 				</div>
 
 				<div class="field">
