@@ -37,10 +37,6 @@ body {
 	left: 0;
 }
 
-input[type="file"]:hover {
-	background-color: #28282880;
-	border-color: #666f;
-}
 input[type="text"],
 input[type="email"] {
 	background-color: #22222280;
@@ -100,6 +96,10 @@ input[type="email"]:focus {
 	transition: background-color ease 0.1s, border-color ease 0.1s;
 	cursor: pointer;
 	gap: 0.5rem;
+}
+#generator #avatar-wrapper:hover {
+	background-color: #28282880;
+	border-color: #666f;
 }
 #generator #avatar-wrapper .icon {
 	background-color: #27245880;
