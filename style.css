@@ -18,6 +18,7 @@ body {
 		no-repeat center / cover var(--main-bg), #040129;
 	color: #eee;
 	font-family: "Inconsolata";
+	min-height: 100vh;
 }
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
 	body {
